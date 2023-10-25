@@ -70,7 +70,12 @@
                     <a href="dashboard.php" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     
                     <a href="signup.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Create User</a>
-                    <a href="logout.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Log Out</a>
+                   <?php 
+                   if($_SESSION['role'] == 'admin'){?>
+                   <a href="logout.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Log Out</a>
+                   <?php
+                }
+                   ?>
 
                    
                 </div>

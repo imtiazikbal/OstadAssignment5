@@ -70,7 +70,12 @@ if(!isset($_SESSION['email'])){
                 </div>
                 <div class="navbar-nav w-100">
                     <a href="user.php" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    
+                    <?php 
+                   if($_SESSION['role'] == 'admin'){?>
+                   <a href="singup.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Create User</a>
+                   <?php
+                }
+                   ?>
                     <a href="logout.php" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Log Out</a>
 
                    
